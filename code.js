@@ -3,8 +3,8 @@ function permutationSort(a) {
     GetPermutations(a, 0, permutations);
     
     for (let i = 0; i < permutations.length; i++) {
-        if (isSorted(permutation)) {
-            console.log(permutation);
+        if (isSorted(i)) {
+            console.log(i);
             return permutations.length;
         }
     }
@@ -24,7 +24,7 @@ function GetPermutations(arr, current, permutation) {
     }
     if (current >= arr.length) {
         permutation[0]++;
-        return sortCheck(arr);
+        return isSorted(arr);
     }
 }
 
